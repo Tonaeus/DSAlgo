@@ -17,7 +17,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution {
+class Solution_1 {
 public:
     int findCenter(vector<vector<int>>& edges) {
         unordered_map<int, int> mp;
@@ -38,7 +38,7 @@ public:
     }
 };
 
-class Solution2 {
+class Solution_2 {
 public:
     int findCenter(vector<vector<int>>& edges) {
         set<int> visted;
