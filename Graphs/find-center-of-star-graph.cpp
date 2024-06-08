@@ -2,7 +2,6 @@
     Approaches
      1. Find the node with a degree of n - 1
      2. Find the node with a degree of > 1 
-    Comments
 
     Data Structures
      - Graph

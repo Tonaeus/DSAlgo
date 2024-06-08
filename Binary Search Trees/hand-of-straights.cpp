@@ -1,15 +1,13 @@
 /* 
     Approaches
      1. Check every groupSize consecutive cards starting from the lowest number
-    Comments
-     - There can be multiples of the same number
 
     Data Structures
      - Binary search tree
     Algorithms
 
     Time Complexity
-     - O(n•log(n))
+     - O(n•log(n)) -> n = size of hand
     Space Complexity
      - O(n)
  */

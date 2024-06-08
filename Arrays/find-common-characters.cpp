@@ -1,8 +1,6 @@
 /* 
     Approaches
      1. Find the intersection of each characters
-    Comments
-     - First iteration use first word frequency for common count
 
     Data Structures
      - Array
@@ -21,8 +19,6 @@ class Solution_1 {
 public:
     vector<string> commonChars(vector<string>& words) {
         unordered_map<char, int> mp1;
-        unordered_map<char, int> mp2;
-        unordered_map<char, int> mp3;
         vector<string> arr;
 
         for (auto c: words[0]) {
@@ -30,6 +26,9 @@ public:
         }
 
         for (int i = 1; i < words.size(); i++) {
+            unordered_map<char, int> mp2;
+            unordered_map<char, int> mp3;
+
             for (auto c: words[i]) {
                 mp2[c]++;
             }
@@ -39,8 +38,6 @@ public:
                 } 
             }
             mp1 = mp3;
-            mp2.clear();
-            mp3.clear();
         }
 
         for (auto& it: mp1) {

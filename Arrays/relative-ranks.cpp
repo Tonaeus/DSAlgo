@@ -1,8 +1,6 @@
 /* 
     Approaches
-     1. Map score to placement and keep track of athelete and score pair
-    Comments
-     - Add one to index in indices to have 0 denote where score do not exist
+     1. Map score to placement and keep track of athlete and score pair
 
     Data Structures
      - Heap

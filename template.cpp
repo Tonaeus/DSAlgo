@@ -1,6 +1,5 @@
 /* 
     Approaches
-    Comments
 
     Data Structures
     Algorithms
