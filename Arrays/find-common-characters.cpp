@@ -1,13 +1,13 @@
 /* 
     Approaches
-     1. Find the intersection of each characters
+     1. Find the intersection of the characters in each word
 
     Data Structures
      - Array
     Algorithms
 
     Time Complexity
-     - O(n) -> n = characters
+     - O(n•k) -> n = words, k = average length of the words
     Space Complexity
      - O(1)
  */

@@ -1,6 +1,7 @@
 /* 
     Approaches
      1. Check if reverse matches original 
+      a. Consider interger overflow
      2. Check if reversed half matches other half
 
     Data Structures
