@@ -1,8 +1,8 @@
 /* 
     Approaches
-     1. Find the index with the same remainder as a previous index
+     1. Find an index where the remainder has already been seen
       a. Consider the first index being part of the sum
-      b. Consider consecutive 0s
+      b. Consider consecutive elements having the same remainder
 
     Data Structures
      - Hash map
@@ -12,7 +12,7 @@
     Time Complexity
      - O(n)
     Space Complexity
-     - O(n)
+     - O(k)
  */
 
 #include <bits/stdc++.h>
@@ -25,15 +25,16 @@ public:
         int sum = 0; 
 
         for (int i = 0; i < nums.size(); i++) {
-            sum += nums[i];
-            int r = sum % k;
-            if (mp.find(r) != mp.end()) {
-                if (i - mp[r] > 1) {
+            sum = (sum + nums[i]) % k;
+
+            if (mp.find(sum) != mp.end()) {
+                if (i - mp[sum] > 1) {
                     return true;
                 }
-                continue; 
             }
-            mp[r] = i;
+            else {
+                mp[sum] = i;  
+            }
         }
 
         return false;
