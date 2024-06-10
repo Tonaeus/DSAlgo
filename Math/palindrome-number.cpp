@@ -1,8 +1,8 @@
 /* 
     Approaches
-     1. Check if reverse matches original 
+     1. Check if the reverse matches the original 
       a. Consider interger overflow
-     2. Check if reversed half matches other half
+     2. Check if the reversed half matches the other half
 
     Data Structures
     Algorithms

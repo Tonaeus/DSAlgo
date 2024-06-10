@@ -1,6 +1,6 @@
 /* 
     Approaches
-     1. Map score to placement and keep track of athlete and score pair
+     1. Map the scores to placements and keep track of the athlete and score pairs
 
     Data Structures
      - Heap
