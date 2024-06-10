@@ -12,7 +12,7 @@
      - O(n+m) -> n = athletes, m = highest score
     Space Complexity
      - O(m) 
- */
+*/
 
 #include <bits/stdc++.h>
 using namespace std;
