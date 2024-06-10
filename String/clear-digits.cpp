@@ -3,6 +3,7 @@
      1. Remove the most recent added letter when a digit is encountered 
 
     Data Structures
+     - String
     Algorithms
 
     Time Complexity
