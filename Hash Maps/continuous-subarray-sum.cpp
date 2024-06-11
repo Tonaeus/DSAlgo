@@ -1,7 +1,7 @@
 /* 
     Approaches
      1. Find an index where the remainder has already been seen
-      a. Consider the first index being part of the sum
+      a. Consider the initial remainder being 0
       b. Consider consecutive elements having the same remainder
 
     Data Structures
