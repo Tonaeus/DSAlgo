@@ -14,7 +14,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution_1 {
+class Solution {
 public:
     int numberOfChild(int n, int k) {
         int lastChild = n - 1;

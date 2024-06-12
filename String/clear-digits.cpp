@@ -15,7 +15,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution_1 {
+class Solution {
 public:
     string clearDigits(string s) {
         string ans = "";

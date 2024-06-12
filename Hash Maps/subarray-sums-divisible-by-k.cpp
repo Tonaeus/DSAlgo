@@ -18,7 +18,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution_1 {
+class Solution {
 public:
     int subarraysDivByK(vector<int>& nums, int k) {
         unordered_map<int, int> mp = {{0, 1}};
