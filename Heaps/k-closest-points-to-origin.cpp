@@ -8,7 +8,7 @@
     Algorithms
 
     Time Complexity
-     - O(n•log(n))
+     - O(n•log(k))
     Space Complexity
      - O(n)
 */
