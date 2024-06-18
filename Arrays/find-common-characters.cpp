@@ -3,6 +3,7 @@
      1. Find the intersection of the characters in each word
 
     Data Structures
+     - Hash map
      - Array
     Algorithms
 

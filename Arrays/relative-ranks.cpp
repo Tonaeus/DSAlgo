@@ -6,7 +6,6 @@
      - Heap
      - Array
     Algorithms
-     - Sort
 
     Time Complexity
      - O(n+m) -> n = athletes, m = highest score
@@ -48,16 +47,15 @@ public:
 class Solution_1_1 {
 public:
     vector<string> findRelativeRanks(vector<int>& score) {
-        int n = score.size();
         int max = *max_element(score.begin(), score.end());
         
         vector<int> idices(max + 1);
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < score.size(); i++) {
             idices[score[i]] = i + 1;
         }
 
         vector<string> medals = {"Gold Medal", "Silver Medal", "Bronze Medal"};
-        vector<string> ans(n);
+        vector<string> ans(score.size());
 
         int c = 1;
         for (int i = max; i >= 0; i--) {
