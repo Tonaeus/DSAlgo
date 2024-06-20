@@ -1,8 +1,10 @@
 /* 
     Approaches
-     1. Find a day on which the number of required bouquets can be created, and then try to find an earlier day where the same can be achieved
-      a. Consider that the number of bouquets that can be created increases strictly with each passing day
+     1. Iterate from the first to last day a flower would bloom to find the first occurence of when m bouquet can be made
+      a. Consider that if day x is a potential day, then y > x is not a potential day
+      b. Consider that if day x is not a potential day, then y < x is not a potential day
 
+       
     Data Structures
     Algorithms
      - Binary search
@@ -27,8 +29,8 @@ public:
             int mid = low + (high - low) / 2;
 
             if (helper(bloomDay, k, mid) >= m) {
-                high = mid - 1;
                 ans = mid;
+                high = mid - 1;
             }
             else {
                 low = mid + 1;
