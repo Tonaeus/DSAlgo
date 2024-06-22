@@ -1,10 +1,11 @@
 /* 
     Approaches
      1. Check each word's substring starting from the first character to find a root match
-     2. Check if the word is in the trie to find the root match
+     2. Check if the word is in the trie to find a root match
 
     Data Structures
      - Hash set
+     - Trie
     Algorithms
 
     Time Complexity
