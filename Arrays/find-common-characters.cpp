@@ -8,7 +8,7 @@
     Algorithms
 
     Time Complexity
-     - O(n•k) -> n = words, k = average length of the words
+     - O(n•k) -> n = number of words, k = average length of each word
     Space Complexity
      - O(1)
 */

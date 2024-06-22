@@ -13,31 +13,23 @@ using namespace std;
 
 class TrieNode {
 public:
-    TrieNode* children[26];
+    vector<TrieNode*> children;
     bool isEndOfWord;
 
-    TrieNode() {
-        isEndOfWord = false;
-        for (int i = 0; i < 26; i++) {
-            children[i] = nullptr;
-        }
-    }
+    TrieNode() : children(26, nullptr) { isEndOfWord = false; }
 };
 
 class Trie {
 public:
-    Trie() {
-        root = new TrieNode();
-    }
+    Trie() { root = new TrieNode(); }
     
     void insert(string word) {
         TrieNode* curr = root;
         for (char c: word) {
-            int index = c - 'a';
-            if (!curr->children[index]) {
-                curr->children[index] = new TrieNode();
+            if (!curr->children[c - 'a']) {
+                curr->children[c - 'a'] = new TrieNode();
             }
-            curr = curr->children[index];
+            curr = curr->children[c - 'a'];
         }
         curr->isEndOfWord = true;
     }
@@ -45,11 +37,10 @@ public:
     bool search(string word) {
         TrieNode* curr = root;
         for (char c: word) {
-            int index = c - 'a';
-            if (!curr->children[index]) {
+            if (!curr->children[c - 'a']) {
                 return false;
             }
-            curr = curr->children[index];
+            curr = curr->children[c - 'a'];
         }
         return curr->isEndOfWord;
     }
@@ -57,11 +48,10 @@ public:
     bool startsWith(string prefix) {
         TrieNode* curr = root;
         for (char c: prefix) {
-            int index = c - 'a';
-            if (!curr->children[index]) {
+            if (!curr->children[c - 'a']) {
                 return false;
             }
-            curr = curr->children[index];
+            curr = curr->children[c - 'a'];
         }
         return true;
     }
