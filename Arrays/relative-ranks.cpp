@@ -16,7 +16,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution_1 {
+// Solution 1
+
+class Solution {
 public:
     vector<string> findRelativeRanks(vector<int>& score) {
         priority_queue<int> maxHeap(score.begin(), score.end()); 
@@ -44,7 +46,9 @@ public:
     }
 };
 
-class Solution_1_1 {
+// Solution 1.1
+
+class Solution {
 public:
     vector<string> findRelativeRanks(vector<int>& score) {
         int max = *max_element(score.begin(), score.end());

@@ -16,7 +16,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution_1 {
+// Solution 1
+
+class Solution {
 public:
     bool isPalindrome(int x) {
         if (x < 0) { return false; }
@@ -34,7 +36,9 @@ public:
     }
 };
 
-class Solution_2 {
+// Solution 2
+
+class Solution {
 public:
     bool isPalindrome(int x) {
         if (x < 0 || (x != 0 && x % 10 == 0)) { return false; }

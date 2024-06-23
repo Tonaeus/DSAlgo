@@ -16,7 +16,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution_1 {
+// Solution 1
+
+class Solution {
 public:
     vector<string> commonChars(vector<string>& words) {
         unordered_map<char, int> mp1;
@@ -51,7 +53,9 @@ public:
     }
 };
 
-class Solution_1_1 {
+// Solution 1.1
+
+class Solution {
 public:
     vector<string> commonChars(vector<string>& words) {
         vector<int> commonCount(26, INT_MAX);
