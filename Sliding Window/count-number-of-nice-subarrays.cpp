@@ -15,6 +15,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Solution 1
+
 class Solution {
 public:
     int numberOfSubarrays(vector<int>& nums, int k) {
@@ -32,6 +34,8 @@ public:
         return ans;
     }
 };
+
+// Solution 1.1
 
 class Solution {
 public:
