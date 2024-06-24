@@ -44,14 +44,20 @@ public:
         int count = 0;
         int l = 0, mid = 0;
         for (int r = 0; r < nums.size(); r++) {
-            if (nums[r] % 2 != 0) count++;
+            if (nums[r] % 2 != 0) {
+                count++;
+            }
             while (count > k) {
-                if (nums[l] % 2 != 0) count--;
+                if (nums[l] % 2 != 0) {
+                    count--;
+                }
                 l++;
             }
             if (count == k) {
                 mid = l;
-                while (nums[mid] % 2 == 0) { mid++; }
+                while (nums[mid] % 2 == 0) { 
+                    mid++; 
+                }
                 ans += mid - l + 1;
             }
         }
