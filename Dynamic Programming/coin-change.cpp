@@ -15,6 +15,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Solution 1
+
 class Solution {
 public:
     int coinChange(vector<int>& coins, int amount) {
@@ -39,6 +41,8 @@ private:
         return dp[amount];
     }
 };
+
+// Solution 1.1
 
 class Solution {
 public:

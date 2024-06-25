@@ -4,7 +4,6 @@
       a. Consider that if day x is a potential day, then y > x is not a potential day
       b. Consider that if day x is not a potential day, then y < x is not a potential day
 
-       
     Data Structures
     Algorithms
      - Binary search

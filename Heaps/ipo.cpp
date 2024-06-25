@@ -3,8 +3,8 @@
      1. Choose the most profitable project based on the available capital each time
 
     Data Structures
-    Algorithms
      - Heap
+    Algorithms
 
     Time Complexity
      - O(n•log(n)+k•log(n))

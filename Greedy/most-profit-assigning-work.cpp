@@ -6,7 +6,6 @@
      - Heap
      - Array
     Algorithms
-     - Sort
 
     Time Complexity
      - O(n•log(n)+m•log(m)) -> n = number of jobs, m = number of workers
