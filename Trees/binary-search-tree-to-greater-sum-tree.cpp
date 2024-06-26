@@ -3,6 +3,7 @@
      1. Traverse the tree in reverse in-order, add the sum of visited nodes to the current node, and then update the sum of visited nodes
 
     Data Structures
+     - Binary search tree
     Algorithms
      - In-order traversal 
 
