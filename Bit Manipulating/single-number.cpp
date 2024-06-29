@@ -1,6 +1,7 @@
 /* 
     Approaches
-     1. Calculate the XOR of the array, since the XOR of a number with itself is 0
+     1. Calculate the XOR of the array
+      a. Consider that the XOR of a number with itself is 0
 
     Data Structures
     Algorithms
