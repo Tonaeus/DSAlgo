@@ -4,6 +4,7 @@
       a. Consider that nodes are added to the descendant array in ascending order
 
     Data Structures
+     - Graph
     Algorithms
      - Depth-first search
 

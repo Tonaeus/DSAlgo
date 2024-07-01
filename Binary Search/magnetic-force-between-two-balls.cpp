@@ -9,7 +9,7 @@
      - Binary search
 
     Time Complexity
-     - O(n•log(k•n/m)) -> n = number of positions, k = maximum position, m = number of balls
+     - O(n•log(n)+n•log(k/m)) -> n = number of positions, k = maximum position, m = number of balls
     Space Complexity
      - O(log(n))
 */

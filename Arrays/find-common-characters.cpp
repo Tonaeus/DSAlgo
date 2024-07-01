@@ -61,7 +61,7 @@ public:
         vector<int> commonCount(26, INT_MAX);
         vector<string> ans;
 
-        for (const auto& w: words) {
+        for (auto& w: words) {
             vector<int> count(26, 0);
             for (auto c: w) {
                 count[c - 'a']++;
