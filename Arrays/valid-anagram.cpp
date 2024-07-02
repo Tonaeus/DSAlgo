@@ -7,7 +7,7 @@
     Algorithms
 
     Time Complexity
-     - O(max(n, m))
+     - O(max(n, m)) -> n = length of s, m = length of t
     Space Complexity
      - O(1)
 */
