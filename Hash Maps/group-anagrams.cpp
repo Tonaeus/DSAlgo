@@ -53,7 +53,7 @@ public:
             }
             string freqS;
             for (int i = 0; i < 26; i++) {
-                freqS += '#' + to_string(i) + to_string(freq[i]);
+                freqS += '#' + to_string(freq[i]);
             }
             mp[freqS].push_back(s);
         }
