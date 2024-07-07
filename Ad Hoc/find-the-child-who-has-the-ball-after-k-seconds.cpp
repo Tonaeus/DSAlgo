@@ -17,10 +17,9 @@ using namespace std;
 class Solution {
 public:
     int numberOfChild(int n, int k) {
-        int lastChild = n - 1;
         int period = 2 * n - 2; 
+        int lst = n - 1;
         int pass = k % period;
-
-        return pass > lastChild ? period - pass : pass; 
+        return pass > lst ? period - pass : pass; 
     }
 };
