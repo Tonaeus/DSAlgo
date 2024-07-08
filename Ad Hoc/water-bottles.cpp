@@ -1,6 +1,6 @@
 /* 
     Problem
-     - Find the maximum number of filled bottles, given the operation to exchange empty bottles
+     - Find the maximum number of filled bottles that can be obtained, given the operation to exchange empty bottles
 
     Approaches
      1. Calculate the sum of the initial filled bottles and the exchanged filled bottles 

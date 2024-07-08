@@ -1,7 +1,11 @@
 /* 
+    Problem 
+     - Find the maximum profit, given that every worker can be assigned at most one job, but one job can be completed multiple times
+
     Approaches
-     1. Iterate from the worker with the lowest ability and update the pointer that keeps track of the job with the highest profit and difficulty less than or equal to that of the worker being assigned a job
-    
+     1. Assign jobs starting with the worker with the lowest ability, and for each worker, assign the job with the highest profit that has a difficulty level equal to or less than that worker's ability
+      a. Consider that if a worker i is assigned a job, then worker j > i is assigned a job with a job of greater or equal profit
+
     Data Structures
      - Heap
      - Array

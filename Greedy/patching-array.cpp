@@ -1,4 +1,7 @@
 /* 
+    Problem
+     - Find the minimum number of patches required, so that any number in the range [1, n] inclusive can be formed by the sum of some elements in the array
+
     Approaches
      1. Solve the interval from 1 to n and add the patch that increases the interval the most whenever a patch is needed
       a. Consider that if [0, a] is solved, then adding b, where b <= a + 1, means that [0, a + b] is solved 

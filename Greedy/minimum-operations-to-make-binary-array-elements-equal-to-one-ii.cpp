@@ -1,4 +1,7 @@
 /* 
+    Problem 
+     - Find the minimum number of operations required to flip all elements from index i to the end of the array, so that all elements in a binary array are equal to 1
+
     Approaches
      1. Count the number of times the binary array starts with 0, transitions from 0 to 1, or transitions from 1 to 0
       a. Consider that if all indices up to index i are solved, then only indices j > i need to be solved
