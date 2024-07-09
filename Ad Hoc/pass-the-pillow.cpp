@@ -3,7 +3,7 @@
      - Find the person who is holding the pillow after some back and forth passes
 
     Approaches
-     1. Count the number of passes in the final period
+     1. Count the consecutive passes ending with and moving in the same direction as the final pass
 
     Data Structures
     Algorithms

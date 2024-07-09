@@ -1,4 +1,7 @@
 /* 
+    Problem
+     - Find the child who is holding the ball after some back and forth passes
+
     Approaches
      1. Count the consecutive passes ending with and moving in the same direction as the final pass
 

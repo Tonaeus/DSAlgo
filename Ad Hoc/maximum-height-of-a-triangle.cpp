@@ -1,4 +1,7 @@
 /* 
+    Problem 
+     - Find the maximum height of a triangle formed by two groups of coloured balls, given that each row is the same colour and each adjacent row is a different colour
+    
     Approaches
      1. Alternative between the two colours to build each row of the triangle
       a. Consider that the triangle can start with either a red or blue ball
