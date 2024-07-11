@@ -1,6 +1,9 @@
 /* 
+    Problem 
+     - Find out if there are three consecutive odd numbers in the array
+
     Approaches
-     1. Iterate through the array and use a counter to track the number of consecutive odd numbers
+     1. Count the current number of consecutive odd numbers
 
     Data Structures
      - Array

@@ -1,6 +1,9 @@
 /* 
+    Problem
+     - Find all characters that appear in every string of a given array, including duplicates
+
     Approaches
-     1. Find the intersection of the characters in each word
+     1. Count the frequency of each character in each string, and then find the minimum occurrence of each character across all strings
 
     Data Structures
      - Hash map

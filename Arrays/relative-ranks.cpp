@@ -1,6 +1,10 @@
 /* 
+    Problem
+     - Find the placement of each athlete, given their score in a competition
+
     Approaches
-     1. Map the scores to placements and keep track of the athlete and score pairs
+     1. Map the scores to placements and then map the athletes to placements
+     2. Map the scores to athletes and then map the scores to placements
 
     Data Structures
      - Heap
@@ -46,7 +50,7 @@ public:
     }
 };
 
-// Solution 1.1
+// Solution 2
 
 class Solution {
 public:

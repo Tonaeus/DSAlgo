@@ -1,6 +1,9 @@
 /* 
+    Problem 
+     - Find out if one string is an anagram of another string
+
     Approaches
-     1. Count the frequency of each character in both strings and check if they are the same
+     1. Count the frequency of each character in both strings and then check if the frequencies are the same for both strings
 
     Data Structures
      - Array

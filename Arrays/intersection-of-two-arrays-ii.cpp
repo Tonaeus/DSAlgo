@@ -1,6 +1,9 @@
 /* 
+    Problem
+     - Find all integers that appear in both of the given arrays, including duplicates
+
     Approaches
-     1. Count the frequency of each integer in the first array, then check if each element in the second array exists in the frequency
+     1. Count the frequency of each integer in the first array, then check if each element in the second array exists in this frequency
 
     Data Structures
      - Array
