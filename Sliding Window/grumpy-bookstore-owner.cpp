@@ -1,6 +1,9 @@
 /* 
+    Problem
+     - Find the maximum number of customers that can be satisfied, given the operation to make the owner not grumpy for k minutes
+
     Approaches
-     1. Sum together the realized satisfied customers and the best conseccutive minutes unrealized customers
+     1. Sum together the realized satisfied customers and the best consecutive minutes of unrealized customers
 
     Data Structures
     Algorithms

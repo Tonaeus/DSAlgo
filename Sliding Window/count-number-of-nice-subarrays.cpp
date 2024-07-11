@@ -1,4 +1,7 @@
 /* 
+    Problem
+     - Find the number of nice subarrays, where a subarray is nice if there are k odd numbers in it
+
     Approaches
      1. Count the amount of even numbers up until the first odd number + 1 each time there is a new odd number in the k odd numbers subarray
 

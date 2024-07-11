@@ -1,6 +1,6 @@
 /* 
     Problem 
-     - Find the maximum points, given the operation to gain points and the operation to gain energies
+     - Find the maximum points, given the operations to gain points and to gain energies
 
     Approaches
      1. Calculate the total energy that can be obtained without the enemy with the smallest energy, and then calculate the points that can be obtained from that total energy

@@ -1,4 +1,7 @@
 /* 
+    Problem 
+     - Find the minimum number of operations required to flip 3 consecutive elements, so that all elements in a binary array are equal to 1
+
     Approaches
      1. Flip current bit and next 2 bits if it is 0
      2. Flip current bit if it is 0

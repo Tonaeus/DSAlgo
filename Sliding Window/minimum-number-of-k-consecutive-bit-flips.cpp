@@ -1,4 +1,7 @@
 /* 
+    Problem
+     - Find the minimum number of operations required to flip k consecutive elements, so that all elements in a binary array are equal to 1
+
     Approaches
      1. Flip current bit if it is 0
       a. Consider that (bit + window flips) % 2 = actual bit

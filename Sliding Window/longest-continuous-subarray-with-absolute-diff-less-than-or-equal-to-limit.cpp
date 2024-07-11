@@ -1,4 +1,7 @@
 /* 
+    Problem 
+     - Find the size of the longest subarray, where the difference between any two elements of the subawaay is less or equal to the limit
+
     Approaches
      1. Shift the subarray's start to the position following the element causing the difference between the smallest and largest element in the subarray to exceed the limit 
 
