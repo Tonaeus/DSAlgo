@@ -1,6 +1,9 @@
 /* 
+    Problem 
+     - Remove all digits, given the operation to delete the first digit and the closest non-digit character to its left
+
     Approaches
-     1. Remove the most recent added letter when a digit is encountered 
+     1. Remove the most recent added letter when the current character is a digit
 
     Data Structures
      - String
