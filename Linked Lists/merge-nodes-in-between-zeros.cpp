@@ -30,19 +30,24 @@ class Solution {
 public:
     ListNode* mergeNodes(ListNode* head) {
         ListNode* sum = head->next;
-        ListNode* curr = sum;
-
+        ListNode* prev = nullptr;
+        ListNode* curr = head->next;
         while (curr) {
             while (curr->val) {
                 sum->val += curr->next->val;
+                prev = curr;
                 curr = curr->next;
+                if (prev != sum) {
+                    delete prev;
+                }
             }
             sum->next = curr->next;
             sum = curr->next;
+            delete curr;
             curr = sum;
         }
-
-        return head->next;
+        ListNode* ans = head->next;
+        delete head;
+        return ans;
     }
 };
-
