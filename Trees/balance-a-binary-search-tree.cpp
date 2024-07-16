@@ -1,7 +1,10 @@
 /* 
+    Problem
+     - Balance a binary search tree
+
     Approaches
-     1. Find the nodes of the original binary search tree in sorted order and create a new tree with paritioning from the middle recursively
-      a. Consider that in-order traversal of a binary search tree gives the nodes in sorted order
+     1. Build a sorted array with values of the nodes, and then build a new tree by recursively spliting the array from the middle to build the left and right subtrees 
+      a. Consider that the in-order traversal of a binary search tree traverses nodes in non-decreasing order
 
     Data Structures
      - Binary search tree

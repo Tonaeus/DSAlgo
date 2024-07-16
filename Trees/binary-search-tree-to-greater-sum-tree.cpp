@@ -1,4 +1,7 @@
-/* 
+/*  
+    Problem
+     - Update the binary search tree, so that the value of each node is changed to the original value plus the sum of all values greater than the original value
+
     Approaches
      1. Traverse the tree in reverse in-order, add the sum of visited nodes to the current node, and then update the sum of visited nodes
 

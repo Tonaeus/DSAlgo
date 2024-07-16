@@ -1,6 +1,6 @@
 /* 
     Problem
-     - Remove nodes from the linked list if their value exists in the given array
+     - Delete nodes from the linked list if their value exists in the given array
 
     Approaches
      1. Connect the previous node to the next node if the current node value exists in the set
