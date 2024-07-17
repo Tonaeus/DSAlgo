@@ -23,21 +23,29 @@ class Solution {
 public:
     vector<string> validStrings(int n) {
         vector<string> ans;
-        dfs(ans, "", n);
+        string str;
+        dfs(ans, str, n);
         return ans;
     }
 private: 
-    void dfs(vector<string>& ans, string s, int n) {
+    void dfs(vector<string>& ans, string& str, int n) {
         if (n == 0) {
-            ans.push_back(s);
+            ans.push_back(str);
             return;
         }
-        if (s.empty() || s.back() == '1') {
-            dfs(ans, s + '0', n - 1);
-            dfs(ans, s + '1', n - 1);
+        if (str.empty() || str.back() == '1') {
+            str.push_back('0');
+            dfs(ans, str, n - 1);
+            str.pop_back();
+
+            str.push_back('1');
+            dfs(ans, str, n - 1);
+            str.pop_back();
         }
         else {
-            dfs(ans, s + '1', n - 1);
+            str.push_back('1');
+            dfs(ans, str, n - 1);
+            str.pop_back();
         }
         return;
     }

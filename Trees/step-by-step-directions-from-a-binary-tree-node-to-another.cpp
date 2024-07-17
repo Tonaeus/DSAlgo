@@ -4,7 +4,7 @@
 
     Approaches
      1. Traverse from the source node to the lowest common ancestor, and then traverse from the lowest common ancestor to the destination node
-      - Consider that the shortest path is the path without repeated paths
+      a. Consider that the shortest path is the path without repeated paths
 
     Data Structures
      - Binary tree
