@@ -1,4 +1,7 @@
 /* 
+    Problem
+     - Find the minimum possible area of a rectangle, given a binary matrix, such that all the "1"s in grid lie inside the area
+
     Approaches
      1. Locate the farthest element with a 1 to the left, right, bottom, and top, and then calculate the area
 
