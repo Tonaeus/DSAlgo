@@ -6,6 +6,7 @@
      1. Locate the farthest element with a 1 to the left, right, bottom, and top, and then calculate the area
 
     Data Structures
+     - Matrix
     Algorithms
 
     Time Complexity
@@ -32,6 +33,7 @@ public:
                 }
             }
         }
+
         return (r - l + 1) * (t - b + 1);
     }
 };
