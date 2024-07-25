@@ -1,9 +1,9 @@
 /* 
     Problem
-     - Sort the array by the frequency of each integer in increasing order, and for integers with the same frequency, sort them in decreasing order
+     - Sort the array by the frequency of each integer in increasing order, and if two integers have the same frequency, sort them in decreasing order
 
     Approaches
-     1. Count the frequency of each integer, and then sort the array by frequency first and by value second
+     1. Count the frequency of each integer, and then sort the array first by frequency and second by value
 
     Data Structures
      - Hash map
