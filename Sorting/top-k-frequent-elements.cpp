@@ -1,9 +1,14 @@
 /* 
+    Problem
+     - Find the top k most frequent elements, given an integer array 
+
     Approaches
-     1. Count the freqency of each integer and sort by highest to lowest frequency 
+     1. Count the frequency of each integer and sort them by highest to lowest frequency
+     2. Count the frequency of each integer and map that frequency to the integer
 
     Data Structures
      - Heap
+     - Array
     Algorithms
      - Bucket sort
 
@@ -44,7 +49,7 @@ public:
     }
 };
 
-// Solution 1.1
+// Solution 2
 
 class Solution {
 public:

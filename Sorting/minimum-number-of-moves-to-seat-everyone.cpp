@@ -1,4 +1,7 @@
 /* 
+    Problem 
+     - Find the minimum number of moves required to move each student to a unique seat, given the initial positions of the seats and students
+
     Approaches
      1. Calculate the sum of the distances between each student and the closest seat
     

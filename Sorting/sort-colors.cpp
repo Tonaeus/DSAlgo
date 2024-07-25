@@ -1,6 +1,9 @@
 /* 
+    Problem 
+     - Sort an array into 3 partitions
+
     Approaches
-     1. Loop through the elements and swap them with either the first or third partition
+     1. Swap the current element with the element to the right of the left partition or to the left of the right partition if it does not belong to the middle partition
 
     Data Structures
     Algorithms

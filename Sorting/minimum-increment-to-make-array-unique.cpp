@@ -1,4 +1,7 @@
 /* 
+    Problem 
+     - Find the minimum number of moves needed to make every integer in the array unique, given that each move increments an integer by 1
+
     Approaches
      1. Calculate the total increments needed so that each element is greater than the previous one in the sorted array
 

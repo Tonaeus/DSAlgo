@@ -1,6 +1,9 @@
 /* 
+    Problem
+     - Find the number of students who are not in their correct positions, given that the students are asked to stand in a single file line in increasing order by height
+
     Approaches
-     1. Count the differences between the original and sorted array
+     1. Count the number of position in the original array that is different from the sorted array
 
     Data Structures
     Algorithms

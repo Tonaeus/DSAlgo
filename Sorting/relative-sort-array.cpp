@@ -1,6 +1,9 @@
 /* 
+    Problem 
+     - Sort "array 1" such that elements appear in the order specified by "array 2", with any elements not in "array 2" placed at the end of "array 1" in ascending order
+
     Approaches
-     1. Order elements by the second array and append the remaining sorted elements
+     1. Separate the elements from "array 1" into those present in and those absent from "array 2", then combine the ordered present elements with the sorted absent elements
 
     Data Structures
     Algorithms
