@@ -6,6 +6,7 @@
      1. Swap the current element with the element to the right of the left partition or to the left of the right partition if it does not belong to the middle partition
 
     Data Structures
+     - Array
     Algorithms
      - Dutch flag
 
