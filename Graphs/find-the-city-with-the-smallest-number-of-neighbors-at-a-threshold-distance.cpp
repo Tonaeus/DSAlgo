@@ -3,7 +3,7 @@
      - Find the city with the smallest number of other cities that are reachable within a given distance
 
     Approaches
-     1. Determine all city pairs shortest paths, and then, for each city, count the number of cities reachable within the given distance
+     1. Determine the shortest path between all city pairs, and then count the number of cities reachable within the given distance for each city
 
     Data Structures
      - Graph
