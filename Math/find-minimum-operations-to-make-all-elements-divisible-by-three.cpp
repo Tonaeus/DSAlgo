@@ -1,4 +1,7 @@
 /* 
+    Problem
+     - Find the minimum number of operations needed to make every element in an integer array divisible by 3, where each operation consists of adding or subtracting 1 from any element
+
     Approaches
      1. Count the number of elements that are not divisible by 3
 

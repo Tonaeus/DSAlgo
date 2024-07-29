@@ -1,4 +1,7 @@
 /* 
+    Problem 
+     - Find out if an integer is a palindrome
+
     Approaches
      1. Check if the reverse matches the original 
       a. Consider interger overflow
