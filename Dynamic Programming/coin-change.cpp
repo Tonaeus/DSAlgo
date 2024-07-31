@@ -1,7 +1,7 @@
 /* 
     Approaches
      1. Find the minimum number of coins needed for (amount - coin) recursively 
-      a. Subproblem -- mimimum coin for a given amount
+      a. Subproblem -- mimimum coins needed 
       b. State -- amount 
       c. Base case -- amount == 0 or amount < 0
 
