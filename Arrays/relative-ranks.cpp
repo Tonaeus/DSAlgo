@@ -12,7 +12,7 @@
     Algorithms
 
     Time Complexity
-     - O(n+m) -> n = athletes, m = highest score
+     - O(n+m) -> n = number of athletes, m = highest score
     Space Complexity
      - O(m) 
 */

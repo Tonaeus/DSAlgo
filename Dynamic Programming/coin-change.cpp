@@ -1,15 +1,20 @@
 /* 
+    Problem
+     - Find the minimum number of coins needed to make up a target amount, given an array of coin denominations and an unlimited supply of each type of coin
+    
     Approaches
-     1. Find the minimum number of coins needed for (amount - coin) recursively 
-      a. Subproblem -- mimimum coins needed 
-      b. State -- amount 
-      c. Base case -- amount == 0 or amount < 0
+     1. Choose the coin that results in the fewest remaining coins needed recursively
+      a. Subproblem: Minimum number of coins needed to make up the current amount
+      b. State: Amount 
+      c. Base case: Amount = 0 or amount < 0
 
     Data Structures
     Algorithms
 
     Time Complexity
+     - O(n•a) -> n = number of coin denominations, a = amount
     Space Complexity
+     - O(a)
 */
 
 #include <bits/stdc++.h>

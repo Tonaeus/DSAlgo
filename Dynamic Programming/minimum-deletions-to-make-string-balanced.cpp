@@ -4,10 +4,9 @@
 
     Approaches
      1. Choose either to delete the current "a" or delete all previous "b"s recursively 
-      a. Consider that if s.substr(0, i) is solved, then s.substr(0, i + 1) can be solved
-      b. Subproblem -- minimum number of deletions and number of "b"s
-      c. State -- string
-      d. Base case -- string length = 1
+      a. Subproblem: Minimum number of deletions and number of "b"s at each s.substr(0, i)
+      b. State: String
+      c. Base case: String length = 0
 
     Data Structures
     Algorithms
@@ -27,24 +26,19 @@ class Solution {
 public:
     int minimumDeletions(string s) {
         int n = s.length();
-        vector<int> dp1(n, INT_MAX);
-        vector<int> dp2(n, 0);
-        auto [ans, bCnt] = dfs(s, n - 1, dp1, dp2);
+        vector<int> dp1(n + 1, INT_MAX);
+        vector<int> dp2(n + 1, 0);
+        auto [ans, bCnt] = dfs(s, n, dp1, dp2);
         return ans;
     }
 private: 
     pair<int, int> dfs(string& s, int i, vector<int>& dp1, vector<int>& dp2) {
-        if (i == 0) {
-            dp1[i] = 0;
-            dp2[i] = s[0] == 'b' ? 1 : 0;
-            return {dp1[i], dp2[i]};
-        }
-
+        if (i == 0) return {0, 0};
         if (dp1[i] != INT_MAX) return {dp1[i], dp2[i]};
 
         auto [subAns, bCnt] = dfs(s, i - 1, dp1, dp2);
 
-        if (s[i] == 'a') {
+        if (s[i - 1] == 'a') {
             dp1[i] = min(subAns + 1, bCnt);
             dp2[i] = bCnt;
         }
@@ -63,14 +57,14 @@ class Solution {
 public:
     int minimumDeletions(string s) {
         int n = s.length();
-        vector<int> dp1(n, INT_MAX);
-        vector<int> dp2(n, 0);
+        vector<int> dp1(n + 1, INT_MAX);
+        vector<int> dp2(n + 1, 0);
         dp1[0] = 0;
-        dp2[0] = s[0] == 'b' ? 1 : 0;
+        dp2[0] = 0;
 
-        for (int i = 0; i < n; ++i) {
+        for (int i = 1; i <= n; i++) {
             if (i > 0) {
-                if (s[i] == 'a') {
+                if (s[i - 1] == 'a') {
                     dp1[i] = min(dp1[i - 1] + 1, dp2[i - 1]);
                     dp2[i] = dp2[i - 1]; 
                 } else {
@@ -80,7 +74,7 @@ public:
             }
         }
 
-        return dp1[n - 1];
+        return dp1[n];
     }
 };
 
