@@ -1,4 +1,7 @@
 /* 
+    Problem 
+     - Find the number of set bits in the binary representation of a positive integer
+
     Approaches
      1. Count the number of bits that are 1 needed to represent the integer in binary form
      2. Count if the least significant bit is a 1, shift the bits to the right, and repeat with the new least significant bit
