@@ -22,12 +22,13 @@ public:
     int numberOfAlternatingGroups(vector<int>& colors) {
         int n = colors.size();
         int ans = 0;
-        for (int i = 1; i < n + 1; i++) {
-            if (colors[i % n] != colors[(i - 1) % n] && colors[i % n] != colors[(i + 1) % n]) {
+        for (int i = 0; i < n; i++) {
+            int prev = (i - 1 + n) % n;
+            int next = (i + 1) % n;
+            if (colors[i] != colors[prev] && colors[i] != colors[next]) {
                 ans++;
             }
         }
         return ans;
     }
 };
-

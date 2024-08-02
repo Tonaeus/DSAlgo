@@ -3,7 +3,7 @@
      - Find the maximum number of customers that can be satisfied, given the operation to make the owner not grumpy for k minutes
 
     Approaches
-     1. Sum together the realized satisfied customers and the best consecutive minutes of unrealized customers
+     1. Sum the number of satisfied customers and the number of unrealized customers in the best minutes window
 
     Data Structures
     Algorithms
@@ -22,22 +22,24 @@ public:
     int maxSatisfied(vector<int>& customers, vector<int>& grumpy, int minutes) {
         int ans = 0;
         
-        int windowSum = 0;
+        int mxWindow = 0;
         for (int i = 0; i < minutes; i++) {
-            ans += grumpy[i] == 0 ? customers[i] : 0;
-
-            windowSum += customers[i] * grumpy[i];
+            if (grumpy[i] == 0) {
+                ans += customers[i];
+            }
+            mxWindow += customers[i] * grumpy[i];
         }
 
-        int maxSum = windowSum;
+        int window = mxWindow;
         for (int i = minutes; i < customers.size(); i++) {
-            ans += grumpy[i] == 0 ? customers[i] : 0;
-     
-            windowSum += customers[i] * grumpy[i];
-            windowSum -= customers[i - minutes] * grumpy[i - minutes];
-            maxSum = max(maxSum, windowSum);
+            if (grumpy[i] == 0) {
+                ans += customers[i];
+            }
+            mxWindow += customers[i] * grumpy[i];
+            mxWindow -= customers[i - minutes] * grumpy[i - minutes];
+            window = max(window, mxWindow);
         }
         
-        return ans + maxSum;
+        return ans + window;
     }
 };
