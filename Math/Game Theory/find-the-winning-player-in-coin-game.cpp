@@ -1,9 +1,9 @@
 /* 
     Problem
-     - Find the winning player, given that players pick up coins with a total value of 115 from coins with values of 75 and 10, where there are "x" coins with a value of 75 and "y" coins with a value of 10
+     - Find out whether Alice or Bob wins the game, given that the player unable to pick up coins with a total value of 115 from coins with values of 75 and 10 on their turn loses, where there are "x" coins with a value of 75 and "y" coins with a value of 10
 
     Approaches
-     1. Check if there are a sufficient number of coins after each turn
+     1. Check if the current player has enough coins for their turn
       a. Consider that the same amount of each type of coin will be used in each turn
 
     Data Structures
