@@ -1,8 +1,11 @@
 /* 
+    Problem
+     - Find the number of non-empty subarrays that have a sum divisible by "k"
+
     Approaches
-     1. Count the indices where the remainder has already been seen
-      a. Consider the initial remainder being 0
-      b. Consider joining the new subarray with the previous subarray
+     1. Count the positions that have the same modulo "k" as a previous position
+      a. Consider that the initial modulo "k" is 0
+      b. Consider joining the new subarrays with the previous subarrays
 
     Data Structures
      - Hash map

@@ -1,6 +1,9 @@
 /* 
+    Problem 
+     - Find all groups of anagrams in an array of strings
+
     Approaches
-     1. Group together strings with the same character frequency 
+     1. Group strings that have the same character frequency together
 
     Data Structures
      - Hash map

@@ -1,8 +1,11 @@
 /* 
+    Problem
+     - Find out if there exists a good subarray, given an integer array and an integer "k", where a good subarray is a subarray with a size of at least 2 and a sum that is a multiple of "k"
+
     Approaches
-     1. Find an index where the remainder has already been seen
-      a. Consider the initial remainder being 0
-      b. Consider consecutive elements having the same remainder
+     1. Determine if there are two different positions with the same modulo "k"
+      a. Consider that the initial modulo "k" is 0
+      b. Consider that consecutive elements can have the same modulo "k"
 
     Data Structures
      - Hash map

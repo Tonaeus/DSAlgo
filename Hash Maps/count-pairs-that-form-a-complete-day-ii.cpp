@@ -1,6 +1,10 @@
 /* 
+    Problem
+     - Find the number of index pairs (i, j) in an integer array "hours", where i < j and the sum of hours[i] and hours[j] equals a complete day
+
     Approaches
-     1. Count how many times the complementary hour of the current hour appears
+     1. Count if the current hour is a complement to a previous hour
+      a. Consider that the current hour may be a complement to multiple previous hours
 
     Data Structures
      - Hash map
@@ -32,5 +36,3 @@ public:
         return ans;
     }
 };
-
-

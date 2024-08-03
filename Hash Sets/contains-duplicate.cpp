@@ -1,6 +1,9 @@
 /* 
+    Problem
+     - Find out if any integer appears more than once in an integer array
+
     Approaches
-     1. Keep track of previously seen elements and check if new elements have already been seen
+     1. Check if the current element is equal to a previous element
 
     Data Structures
      - Hash set

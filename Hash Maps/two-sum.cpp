@@ -1,6 +1,9 @@
 /* 
+    Problem
+     - Find the indices of two elements in an integer array that add up to a target number
+
     Approaches
-     1. Keep track of potential complements so that if a complement of the current addend is found, then the solution is also found
+     1. Check if the current addend is a complement to a previous addend
 
     Data Structures
      - Hash map
