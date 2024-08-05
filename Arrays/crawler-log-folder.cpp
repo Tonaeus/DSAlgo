@@ -3,7 +3,7 @@
      - Find the minimum number of operations needed to return to the main folder after a series of folder change operations, given the operations "../", "./", and "x/"
 
     Approaches
-     1. Count distance from main folder
+     1. Count the distance from the main folder
       a. Consider that the "../" operation decreases the distance from the main folder by 1, unless the distance is already 0
       b. Consider that the "./" operation does not change the distance from the main folder
       c. Consider that the "x/" operation increases the distance from the main folder by 1
