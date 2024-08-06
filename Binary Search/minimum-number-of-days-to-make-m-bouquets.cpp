@@ -1,6 +1,9 @@
 /* 
+    Problem 
+     - Find the minimum number of days required to make "m" bouquets, where each bouquet uses "k" adjacent flowers, given the bloom day and position of each flower in "bloomDay"
+
     Approaches
-     1. Iterate from the first to last day a flower would bloom to find the first occurence of when m bouquet can be made
+     1. Search from the first to last day a flower would bloom to identify the first occurrence of when "m" bouquets can be made
       a. Consider that if day x is a potential day, then y > x is not a potential day
       b. Consider that if day x is not a potential day, then y < x is not a potential day
 

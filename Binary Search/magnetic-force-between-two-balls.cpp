@@ -1,6 +1,9 @@
 /* 
+    Problem 
+     - Find the minimum distance between any two balls such that the total distance between all balls is maximized, given the positions of the baskets where the balls are to be placed
+
     Approaches
-     1. Iterate from 1 to the greatest distance possible between m balls until the total distance between the balls exceed the maximum position
+     1. Search from 1 to the equal distance between "m" balls to identify the minimum distance between any two balls 
       a. Consider that if x is a potential distance, then y < x is not a potential distance
       b. Consider that if x is not a potential distance, then y > x is not a potential distance
 
@@ -39,18 +42,18 @@ public:
         return ans;
     }
 private: 
-    bool helper(vector<int>& position, int m, int f) {
-        int countBalls = 1;
+    bool helper(vector<int>& position, int m, int dist) {
+        int cnt = 1;
         int prevPos = position.front();
 
-        for (int i = 1; i < position.size() && countBalls < m; i++) {
+        for (int i = 1; i < position.size() && cnt < m; i++) {
             int currPos = position[i];
-            if (currPos - prevPos >= f) {
-                countBalls++;
+            if (currPos - prevPos >= dist) {
+                cnt++;
                 prevPos = currPos;
             }
         }
 
-        return countBalls == m;
+        return cnt == m;
     }
 };
