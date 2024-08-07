@@ -1,6 +1,9 @@
 /* 
+    Problem 
+     - Find the edge that can be removed so that the graph is a tree of "n" nodes
+
     Approaches
-     1. Join two nodes together at a time, and if the two nodes create a cycle, return the edge that joins the two nodes
+     1. Build the graph by connecting 2 nodes at a time, and if a connection results in a cycle, then remove the edge in that connection
 
     Data Structures
      - Disjoint-set
@@ -20,12 +23,10 @@ public:
     DisjointSet (int n) : par(n), rank(n) {
         iota(begin(par), end(par), 0);
     }
-
     int doFind(int x) {
         if (x == par[x]) return x;
         return par[x] = doFind(par[x]);
     }
-
     bool doUnion(int x, int y) {
         int xp = doFind(x), yp = doFind(y);
         if (xp == yp) return false;

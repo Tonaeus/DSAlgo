@@ -1,4 +1,7 @@
 /* 
+    Problem 
+     - Find all ancestors of each node in a directed acyclic graph
+
     Approaches
      1. Add each node as the ancestor to all of its descendant arrays and then sort those arrays
       a. Consider that nodes are added to the descendant array in ascending order
@@ -9,9 +12,9 @@
      - Depth-first search
 
     Time Complexity
-     - O(n•(n+e))
+     - O(v•(v+e))
     Space Complexity
-     - O(n^2)
+     - O(v^2)
 */
 
 #include <bits/stdc++.h>

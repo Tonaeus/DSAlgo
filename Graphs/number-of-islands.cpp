@@ -1,4 +1,7 @@
 /* 
+    Problem 
+     - Find the number of islands in an m x n binary grid, where an island is defined as a group of "1"s connected horizontally or vertically
+
     Approaches
      1. Visit each node and set all nodes of each encountered island to '0' before continuing to the next node
 

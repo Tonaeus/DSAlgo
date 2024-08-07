@@ -1,7 +1,11 @@
 /* 
+    Problem 
+     - Find the maximum number of edges that can be removed so that both Alice and Bob can still fully traverse a given graph, where the graph has edges with the type of Alice-only, Bob-only, and both
+
     Approaches
-     1. Construct a connected graph for Alice and Bob individually, count the number of edges used, and then subtract that number from the given number of edges
+     1. Build a connected graph for Alice and Bob individually, count the number of edges used, and then subtract that number from the given number of edges
       a. Consider that the nodes are labeled from 1 to n and not 0 to n - 1
+      b. Consider building each graph using edges that are for both Alice and Bob first
 
     Data Structures
      - Disjoint-set
@@ -21,12 +25,10 @@ public:
     DisjointSet (int n) : par(n), rank(n), cpnt(n - 1) { 
         iota(begin(par), end(par), 0);
     }
-
     int doFind(int x) {
         if (x == par[x]) return x;
         return par[x] = doFind(par[x]);
     }
-
     bool doUnion(int x, int y) {
         int xp = doFind(x), yp = doFind(y);
         if (xp == yp) return false;
@@ -44,10 +46,7 @@ public:
         cpnt--;
         return true; 
     }
-
     bool isConnected() {
-        cout << cpnt;
-        cout << endl;
         return cpnt == 1;
     }
 private:

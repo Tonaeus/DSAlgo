@@ -1,16 +1,19 @@
 /* 
+    Problem
+     - Find the node that is connected to all other nodes, given an array of edges
+
     Approaches
-     1. Find the node with a degree of n - 1
-     2. Find the node with a degree of > 1 
+     1. Identify the node with a degree of n - 1
+     2. Identify the node with more than 1 edge
 
     Data Structures
      - Graph
     Algorithms
 
     Time Complexity
-     - O(n)
+     - O(1)
     Space Complexity
-     - O(n)
+     - O(1)
 */
 
 #include <bits/stdc++.h>
@@ -22,7 +25,6 @@ class Solution {
 public:
     int findCenter(vector<vector<int>>& edges) {
         unordered_map<int, int> mp;
-        int v = -1;
 
         for (int i = 0; i < edges.size(); i++) {
             mp[edges[i][0]]++;
@@ -57,5 +59,19 @@ public:
         }
 
         return 0;
+    }
+};
+
+// Solution 2.1
+
+class Solution {
+public:
+    int findCenter(vector<vector<int>>& edges) {
+        if (edges[0][0] == edges[1][0] || edges[0][0] == edges[1][1]) {
+            return edges[0][0]; 
+        } 
+        else {
+            return edges[0][1]; 
+        }
     }
 };

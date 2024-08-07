@@ -1,4 +1,7 @@
 /* 
+    Problem 
+     - Find the maximum area of an island in an m x n binary matrix, where an island is defined as a group of "1"s connected horizontally or vertically
+
     Approaches
      1. Count the nodes belonging to each island and keep track of the island with the most nodes
 
