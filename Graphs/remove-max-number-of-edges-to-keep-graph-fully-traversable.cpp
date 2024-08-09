@@ -12,9 +12,9 @@
     Algorithms
 
     Time Complexity
-     - O(n)
+     - O(v)
     Space Complexity
-     - O(n)
+     - O(v)
 */
 
 #include <bits/stdc++.h>
