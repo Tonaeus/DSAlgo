@@ -1,9 +1,9 @@
 /* 
     Problem
-     - Find the shortest path from city 0 to city n - 1 each time a new unidirectional road is added, given that initially, there is a unidirectional road from city i to city i + 1 for all city 0 <= i < n - 1
+     - Find the shortest path from city 0 to city n - 1 each time a new unidirectional road is added, given that initially, there is a unidirectional road from city i to city i + 1 for all cities 0 <= i < n - 1
 
     Approaches
-     1. Add the first edge from "queries" to the graph, determine the shortest unweighted path from city 0 to city n - 1, and then repeat with the next edge until no edges remain in "queries"
+     1. Add the first road from "queries" to the graph, determine the shortest unweighted path from city 0 to city n - 1, and then repeat with the next road until no roads remain in "queries"
 
     Data Structures
      - Graph
