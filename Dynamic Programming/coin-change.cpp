@@ -5,8 +5,8 @@
     Approaches
      1. Choose the coin that results in the fewest remaining coins needed recursively
       a. Subproblem: Minimum number of coins needed to make up the current amount
-      b. State: Amount 
-      c. Base case: Amount = 0 or amount < 0
+      b. Base case: Amount = 0 or amount < 0
+      c. State: Amount 
 
     Data Structures
     Algorithms

@@ -11,7 +11,6 @@
      - Graph
     Algorithms
      - Depth-first search
-     - Topological sort
 
     Time Complexity
      - O(k^2)

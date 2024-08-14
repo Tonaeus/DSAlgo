@@ -5,8 +5,8 @@
     Approaches
      1. Choose either to place the book on the same shelf or on the next shelf recursively
       a. Subproblem: Minimum height of the entire bookshelf using available books
-      b. State: Available books
-      c. Base case: Available books = 0
+      b. Base case: Available books = 0
+      c. State: Available books
 
     Data Structures
     Algorithms
