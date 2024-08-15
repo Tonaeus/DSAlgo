@@ -24,7 +24,8 @@ public:
         int ans = 0;
         deque<int> imq, dmq;
 
-        for (int l = 0, r = 0; r < nums.size(); r++) {
+        int l = 0;
+        for (int r = 0; r < nums.size(); r++) {
             while (!imq.empty() && imq.back() > nums[r]) {
                 imq.pop_back();
             }
