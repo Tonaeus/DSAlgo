@@ -4,9 +4,13 @@
 
     Approaches
      1. Choose either to delete the current "a" or delete all previous "b"s recursively 
-      a. Subproblem: Minimum number of deletions and number of "b"s at each s.substr(0, i)
-      b. Base case: String length = 0
-      c. State: String
+      a. Subproblem 1: Minimum number of deletions 
+      b. Base case 1: String length = 0
+      c. State 1: String
+      d. Subproblem 2: Number of "b"s in each s.substr(0, i)
+      e. Base case 2: String length = 0
+      f. State 2: String
+      d. Consider that if s.substr(0, i) is solved, then s.substr(0, i + 1) can also be solved
 
     Data Structures
     Algorithms

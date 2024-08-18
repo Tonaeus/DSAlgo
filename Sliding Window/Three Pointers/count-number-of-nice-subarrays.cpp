@@ -45,6 +45,7 @@ public:
     int numberOfSubarrays(vector<int>& nums, int k) {
         int ans = 0;
         int count = 0;
+        
         int l = 0, mid = 0;
         for (int r = 0; r < nums.size(); r++) {
             if (nums[r] % 2 != 0) {

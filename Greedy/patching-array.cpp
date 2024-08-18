@@ -23,8 +23,8 @@ public:
     int minPatches(vector<int>& nums, int n) {
         long upperBound = 1;
         int i = 0;
-        int ans = 0;
         
+        int ans = 0;
         while (upperBound <= n) {
             if (i < nums.size() && nums[i] <= upperBound) {
                 upperBound += nums[i];
