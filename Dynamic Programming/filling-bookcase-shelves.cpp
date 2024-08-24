@@ -26,26 +26,27 @@ class Solution {
 public:
     int minHeightShelves(vector<vector<int>>& books, int shelfWidth) {
         int n = books.size();
-        vector<int> dp(n + 1, INT_MAX);
-        return dfs(books, n, shelfWidth, dp);
+        vector<int> dp(n + 1, -1);
+        return dfs(books, shelfWidth, n, dp);
     }
-    int dfs(vector<vector<int>>& books, int i, int shelfWidth, vector<int>& dp) {
+    int dfs(vector<vector<int>>& books, int shelfWidth, int i, vector<int>& dp) {
         if (i == 0) return 0;
-        if (dp[i] != INT_MAX) return dp[i];
+        if (dp[i] != -1) return dp[i];
         
         int shelfW = shelfWidth;
         int shelfH = 0; 
 
+        int ans = INT_MAX;
         for (int j = i; j > 0; j--) {
             int w = books[j - 1][0];
             int h = books[j - 1][1];
             if (shelfW < w) break;
             shelfW -= w;
             shelfH = max(shelfH, h);
-            dp[i] = min(dp[i], dfs(books, j - 1, shelfWidth, dp) + shelfH);
+            ans = min(ans, dfs(books, shelfWidth, j - 1, dp) + shelfH);
         }
 
-        return dp[i];
+        return dp[i] = ans;
     }
 };
 
@@ -55,21 +56,23 @@ class Solution {
 public:
     int minHeightShelves(vector<vector<int>>& books, int shelfWidth) {
         int n = books.size();
-        vector<int> dp(n + 1, INT_MAX);
+        vector<int> dp(n + 1, -1);
         dp[0] = 0;
 
         for (int i = 1; i <= n; i++) {
             int shelfW = shelfWidth;
             int shelfH = 0; 
 
+            int ans = INT_MAX;
             for (int j = i; j > 0; j--) {
                 int w = books[j - 1][0];
                 int h = books[j - 1][1];
                 if (shelfW < w) break;
                 shelfW -= w;
                 shelfH = max(shelfH, h);
-                dp[i] = min(dp[i], dp[j - 1] + shelfH);
+                ans = min(ans, dp[j - 1] + shelfH);
             }
+            dp[i] = ans;
         }
 
         return dp[n];

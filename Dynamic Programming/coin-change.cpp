@@ -25,7 +25,7 @@ using namespace std;
 class Solution {
 public:
     int coinChange(vector<int>& coins, int amount) {
-        vector<int> dp(amount + 1, INT_MAX);
+        vector<int> dp(amount + 1, -2);
         return dfs(coins, amount, dp);
     }
 private:
@@ -33,17 +33,17 @@ private:
         if (amount == 0) return 0;  
         if (amount < 0) return -1;
 
-        if (dp[amount] != INT_MAX) return dp[amount];
+        if (dp[amount] != -2) return dp[amount];
 
+        int ans = INT_MAX;
         for (int coin : coins) {
             int subAns = dfs(coins, amount - coin, dp);
             if (subAns != -1) {
-                dp[amount] = min(dp[amount], subAns + 1);  
+                ans = min(ans, subAns + 1);  
             }
         }
-        if (dp[amount] == INT_MAX) dp[amount] = -1;
 
-        return dp[amount];
+        return dp[amount] = ans < INT_MAX ? ans : -1;
     }
 };
 
@@ -52,19 +52,20 @@ private:
 class Solution {
 public:
     int coinChange(vector<int>& coins, int amount) {
-        vector<int> dp(amount + 1, INT_MAX);
+        vector<int> dp(amount + 1, -2);
         dp[0] = 0;
 
         for (int i = 1; i <= amount; i++) {
+            int ans = INT_MAX;
             for (int coin: coins) {
                 if (i - coin >= 0) {
                     int subAns = dp[i - coin];
                     if (subAns != -1) {
-                        dp[i] = min(dp[i], subAns + 1);
+                        ans = min(ans, subAns + 1);
                     }
                 }
             }
-            if (dp[i] == INT_MAX) dp[i] = -1;
+            dp[i] = ans < INT_MAX ? ans : -1;
         }
 
         return dp[amount];
