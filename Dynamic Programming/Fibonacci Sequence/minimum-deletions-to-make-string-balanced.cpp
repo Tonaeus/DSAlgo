@@ -30,28 +30,31 @@ class Solution {
 public:
     int minimumDeletions(string s) {
         int n = s.length();
-        vector<int> dp1(n + 1, INT_MAX);
-        vector<int> dp2(n + 1, 0);
+        vector<int> dp1(n + 1, -1);
+        vector<int> dp2(n + 1, -1);
         auto [ans, bCnt] = dfs(s, n, dp1, dp2);
         return ans;
     }
 private: 
     pair<int, int> dfs(string& s, int i, vector<int>& dp1, vector<int>& dp2) {
         if (i == 0) return {0, 0};
-        if (dp1[i] != INT_MAX) return {dp1[i], dp2[i]};
+        if (dp1[i] != -1 && dp2[i] != -1) return {dp1[i], dp2[i]};
 
-        auto [subAns, bCnt] = dfs(s, i - 1, dp1, dp2);
+        auto [subAns, subBCnt] = dfs(s, i - 1, dp1, dp2);
+
+        int ans = INT_MAX;
+        int bCnt = 0;
 
         if (s[i - 1] == 'a') {
-            dp1[i] = min(subAns + 1, bCnt);
-            dp2[i] = bCnt;
+            ans = min(subAns + 1, subBCnt);
+            bCnt = subBCnt;
         }
         else {
-            dp1[i] = subAns;
-            dp2[i] = bCnt + 1;
+            ans = subAns;
+            bCnt = subBCnt + 1;
         }
         
-        return {dp1[i], dp2[i]};
+        return {dp1[i] = ans, dp2[i] = bCnt};
     }
 };
 
@@ -61,21 +64,24 @@ class Solution {
 public:
     int minimumDeletions(string s) {
         int n = s.length();
-        vector<int> dp1(n + 1, INT_MAX);
-        vector<int> dp2(n + 1, 0);
+        vector<int> dp1(n + 1, -1);
+        vector<int> dp2(n + 1, -1);
         dp1[0] = 0;
         dp2[0] = 0;
 
         for (int i = 1; i <= n; i++) {
-            if (i > 0) {
-                if (s[i - 1] == 'a') {
-                    dp1[i] = min(dp1[i - 1] + 1, dp2[i - 1]);
-                    dp2[i] = dp2[i - 1]; 
-                } else {
-                    dp1[i] = dp1[i - 1];
-                    dp2[i] = dp2[i - 1] + 1;
-                }
+            int ans = INT_MAX;
+            int bCnt = 0;
+
+            if (s[i - 1] == 'a') {
+                ans = min(dp1[i - 1] + 1, dp2[i - 1]);
+                bCnt = dp2[i - 1]; 
+            } else {
+                ans = dp1[i - 1];
+                bCnt = dp2[i - 1] + 1;
             }
+            
+            dp1[i] = ans, dp2[i] = bCnt;
         }
 
         return dp1[n];

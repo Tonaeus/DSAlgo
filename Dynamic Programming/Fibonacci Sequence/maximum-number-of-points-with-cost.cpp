@@ -34,7 +34,7 @@ public:
         int m = points.size();
         int n = points[0].size();
 
-        vector<long long> dp(n);
+        vector<long long> dp(n, -1);
         for (int i = 0; i < n; i++) {
             dp[i] = points[0][i];
         }
