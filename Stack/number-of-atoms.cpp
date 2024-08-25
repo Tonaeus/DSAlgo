@@ -6,7 +6,7 @@
      1. Count each chemical element by multiplying its current count by the current multiplier
 
     Data Structures
-     - Binary search tree
+     - Ordered map
      - Stack
     Algorithms
 
@@ -22,7 +22,7 @@ using namespace std;
 class Solution {
 public:
     string countOfAtoms(string formula) {
-        map<string, int> bst;
+        map<string, int> mp;
         stack<int> stk({1});
         int cnt = 1;
         for (int i = formula.length() - 1; i >= 0; i--) {
@@ -46,12 +46,12 @@ public:
                     i--;
                 }
                 string name = formula.substr(i, j - i + 1);
-                bst[name] += cnt;
+                mp[name] += cnt;
                 cnt = stk.top();
             }
         }
         string ans;
-        for (const auto& [key, val] : bst) {
+        for (const auto& [key, val] : mp) {
             ans += key;
             ans += val != 1 ? to_string(val) : "";
         }

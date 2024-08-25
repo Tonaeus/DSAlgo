@@ -8,7 +8,7 @@
       b. Consider that a leaf node is a good node
 
     Data Structures
-     - Tree
+     - N-ary tree
     Algorithms
      - Depth-first search
 
