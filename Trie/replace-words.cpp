@@ -1,4 +1,7 @@
 /* 
+    Problem 
+     - Find and replace all derivatives in a sentence with their shortest root from a given dictionary
+
     Approaches
      1. Check each word's substring starting from the first character to find a root match
      2. Check if the word is in the trie to find a root match
@@ -9,9 +12,9 @@
     Algorithms
 
     Time Complexity
-     - O(d•w+s•w) -> d = number of words in the dictionary, s = number of words in the sentence, w = average length of each word
+     - O(d•l+s•l) -> d = number of words in the dictionary, s = number of words in the sentence, l = average length of each word
     Space Complexity
-     - O(d•w+s•w)
+     - O(d•l+s•l)
  */
 
 #include <bits/stdc++.h>
@@ -85,6 +88,7 @@ public:
         }
         return word;
     }
+    
 private:
     TrieNode* root;
 };

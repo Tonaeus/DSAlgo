@@ -1,11 +1,21 @@
 /* 
+    Problem
+     - Create a class to efficiently store and retrieve keys, where each key is a sequence of characters representing a word
+
     Approaches
+     1. Build a tree where each node represents a character, and each sequence of nodes ending at a node that marks the end of a key represents a key
 
     Data Structures
+     - Trie
     Algorithms
 
     Time Complexity
+     - Constructor: O(1) -> w = number of words, l = average length of the words
+     - `insert`: O(l)
+     - `search`: O(l)
+     - `startsWith`: O(l)
     Space Complexity
+     - O(w•l)
 */
 
 #include <bits/stdc++.h>
@@ -16,12 +26,16 @@ public:
     vector<TrieNode*> children;
     bool isEndOfWord;
 
-    TrieNode() : children(26, nullptr) { isEndOfWord = false; }
+    TrieNode() : children(26, nullptr) { 
+        isEndOfWord = false;
+    }
 };
 
 class Trie {
 public:
-    Trie() { root = new TrieNode(); }
+    Trie() { 
+        root = new TrieNode(); 
+    }
     
     void insert(string word) {
         TrieNode* curr = root;
@@ -55,6 +69,7 @@ public:
         }
         return true;
     }
+
 private:
     TrieNode* root;
 };
