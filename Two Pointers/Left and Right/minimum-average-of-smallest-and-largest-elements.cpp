@@ -1,4 +1,7 @@
 /* 
+    Problem
+     - Find the minimum element in the array of averages obtained by repeatedly removing the smallest and largest elements from an array of integers and adding their average to the array of averages
+
     Approaches
      1. Iterate from both ends of the sorted array, calculate the average, and update the minimum average
 
