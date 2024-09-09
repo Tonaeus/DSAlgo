@@ -6,9 +6,9 @@
      1. Count the nodes belonging to each island and keep track of the island with the most nodes
 
     Data Structures
-     - Graph
+     - Matrix
     Algorithms
-     - Depth-first search
+     - Flood fill
 
     Time Complexity
      - O(m•n)

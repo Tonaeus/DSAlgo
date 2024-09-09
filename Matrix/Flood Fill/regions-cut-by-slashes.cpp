@@ -6,9 +6,9 @@
      1. Convert the grid into a binary matrix representation, and then count the number of groups of horizontally and vertically adjacent "0"s 
 
     Data Structures
-     - Graph
+     - Matrix
     Algorithms
-     - Depth-first search
+     - Flood Fill
 
     Time Complexity
      - O(n^2)

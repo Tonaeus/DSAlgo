@@ -4,7 +4,7 @@
 
     Approaches
      1. Count the integers in the range that are not perfect squares with prime number roots
-      a. Consider that a number can have only 1 proper divisor other than "1" if and only if the divisor and quotient are the same
+      a. Consider that if a number has exactly 1 proper divisor other than "1", then this divisor must be the square root of the number and a prime number
 
     Data Structures
     Algorithms

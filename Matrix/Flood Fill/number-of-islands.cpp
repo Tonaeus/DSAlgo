@@ -6,9 +6,9 @@
      1. Visit each node and set all nodes of each encountered island to '0' before continuing to the next node
 
     Data Structures
-     - Graph
+     - Matrix
     Algorithms
-     - Depth-first search
+     - Flood fill
 
     Time Complexity
      - O(m•n)

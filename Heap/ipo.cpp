@@ -1,6 +1,10 @@
 /* 
+    Problem
+     - Find the maximum final capital after selecting and completing up to k distinct projects, given the initial capital and each project's required minimum capital and pure profit
+    
     Approaches
      1. Choose the most profitable project based on the available capital each time
+      a. Consider that starting a project does not decrease the available capital
 
     Data Structures
      - Heap

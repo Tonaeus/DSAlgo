@@ -1,6 +1,9 @@
 /* 
+    Problem 
+     - Find the weight of the last remaining stone after repeatedly smashing the two heaviest stones, where if the weights match, both stones are destroyed, and if not, the smaller stone is destroyed, and the larger stone’s weight is decreased by the smaller stone’s weight
+
     Approaches
-     1. Get the two heaviest stones and compare them each turn
+     1. Compare the two heaviest stones each turn
 
     Data Structures
      - Heap

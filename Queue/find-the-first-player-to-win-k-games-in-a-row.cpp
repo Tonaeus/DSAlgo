@@ -1,4 +1,7 @@
 /* 
+    Problem 
+     - Find the player who first wins k consecutive games in a queue of n players, where each game is played by the first two players in the queue and is won by the player with the higher skill level, and the winner staying at the front while the loser moves to the end
+    
     Approaches
      1. Compare the first two value and push the loser to the back
 
