@@ -1,13 +1,9 @@
 /* 
     Problem
+     - 
 
-    Approaches
-
-    Data Structures
-    Algorithms
-
-    Time Complexity
-    Space Complexity
+    Pattern 
+     - 
 */
 
 #include <bits/stdc++.h>
