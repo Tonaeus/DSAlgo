@@ -2,14 +2,20 @@
     Problem
      - https://leetcode.com/problems/target-sum/description/
 
-    Pattern 
+    Patterns
      - O/1 Knapsack (Bounded)
+
+    Comments
+     - Decision: Choose either to add or substract the current integer
+     - Subproblem: Number of expressions for the current target
+     - Base case: Number of unused integers == 0
+     - State: Number of unused integers, target
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 
-// Approach 1: Top-Down DP
+// Solution 1: Top-Down DP
 
 // Time Complexity: O(n•sum)
 // Space Complexity: O(n•sum)
@@ -40,7 +46,7 @@ private:
     }
 };
 
-// Approach 2: Bottom-Up DP
+// Solution 2: Bottom-Up DP
 
 // Time Complexity: O(n•sum)
 // Space Complexity: O(n•sum)
@@ -72,7 +78,7 @@ public:
     }
 };
 
-// Approach 3: Space Optimized Bottom-Up DP
+// Solution 3: Space Optimized Bottom-Up DP
 
 // Time Complexity: O(n•sum)
 // Space Complexity: O(sum)
