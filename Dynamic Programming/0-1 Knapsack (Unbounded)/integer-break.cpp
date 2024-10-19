@@ -6,10 +6,10 @@
      - 0/1 Knapsack (Unbounded)
 
     Comments
-     - Decision: Choose to use or not use the current integer
+     - Decision: Choose either to use or not use the current integer
      - Subproblem: Maximum product for the current target
-     - Base case: Available integers == 0
-     - State: Available integers, target
+     - Base case: Number of unused integers == 0, target == 0
+     - State: Number of unused integers, target
 
      - https://twchen.gitbook.io/leetcode/dynamic-programming/integer-break
 */
@@ -91,7 +91,7 @@ public:
     }
 };
 
-// Solution 4: Mathematic
+// Solution 4: Mathematical optimization
 
 // Time Complexity: O(log(n))
 // Space Complexity: O(1)

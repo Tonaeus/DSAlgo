@@ -8,7 +8,7 @@
     Comments
      - Decision: Choose either to include or exclude the current integer in the subset
      - Subproblem: Whether the unused integers can form a subset that sums to the current target
-     - Base case: Number is unused intergers = 0, target == 0
+     - Base case: Number of unused intergers = 0, target == 0
      - State: Number of unused integers, target
 */
 
