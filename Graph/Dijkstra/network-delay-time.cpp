@@ -27,25 +27,25 @@ public:
         vector<int> dist(n + 1, INT_MAX);
         dist[k] = 0;
 
-        priority_queue<pii, vector<pii>, greater<pii>> mxh;
-        mxh.push({0, k});
+        priority_queue<pii, vector<pii>, greater<pii>> mnh;
+        mnh.push({0, k});
 
-        while (!mxh.empty()) {
-            int fm = mxh.top().second;
-            int d = mxh.top().first;
-            mxh.pop();
+        while (!mnh.empty()) {
+            int fm = mnh.top().second;
+            int fd = mnh.top().first;
+            mnh.pop();
 
-            if (d != dist[fm]) {
+            if (fd != dist[fm]) {
                 continue;
             }
 
             for (auto& nbr : adj[fm]) {
                 int to = nbr.first;
-                int d = nbr.second;
+                int td = nbr.second;
 
-                if (dist[fm] + d < dist[to]) {
-                    dist[to] = dist[fm] + d;
-                    mxh.push({dist[to], to});
+                if (dist[fm] + td < dist[to]) {
+                    dist[to] = dist[fm] + td;
+                    mnh.push({dist[to], to});
                 }
             }
         }
